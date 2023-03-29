@@ -32,7 +32,7 @@ public class LinkedList<T> {
 
     public T get(int index) {
         if (index < 0) {
-            throw new IndexOutOfBoundsException("Index " + index + " not correct!");
+            throw new ReturnException("Index " + index + " not correct!");
         }
         Node<T> current = head;
         int currentIndex = 0;
