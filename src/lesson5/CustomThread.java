@@ -33,7 +33,6 @@ public class CustomThread extends Thread {
             }
             if (isPrime) {
                 primes.add(i); //If number is prime, add to List
-                notify(); //Restore thead and finish a program
             }
         }
     }
