@@ -41,6 +41,10 @@ public class Main {
             thirdThead.wait(); //Wait when numbers filtered and adds/not add to arrayList
         }
         thirdThead.numbersBetween(startNumber, finishedNumber, primes);
+        
+         synchronized (thirdThead) {
+            thirdThead.notify(); ////Restore thead and finish a program
+        }
 
         System.out.println(primes); //Show all prime numbers
         System.out.println("Prime numbers between " + startNumber + " and " + finishedNumber);
