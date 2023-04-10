@@ -10,7 +10,7 @@ public class CustomThread extends Thread {
         System.out.println("Custom thread is running, name: " + Thread.currentThread().getName());
     }
 
-    public void takeEven(int number, Result result) { //Check if this number is even and set to obj
+    public void takeEven(int number, Result result) {
         if (Objects.isNull(result)) {
             throw new IllegalArgumentException("SHAPE_CAN_NOT_BE_NULL");
         }
@@ -23,16 +23,16 @@ public class CustomThread extends Thread {
         if (startNumber <= 1) {
             startNumber = 2;
         }
-        for (int i = startNumber; i <= finishedNumber; i++) { //Generate numbers from start number to finished number
+        for (int i = startNumber; i <= finishedNumber; i++) {
             boolean isPrime = true;
-            for (int j = 2; j <= Math.sqrt(i); j++) { //Check if this number is prime
+            for (int j = 2; j <= Math.sqrt(i); j++) {
                 if (i % j == 0) {
                     isPrime = false;
                     break;
                 }
             }
             if (isPrime) {
-                primes.add(i); //If number is prime, add to List
+                primes.add(i);
             }
         }
     }
