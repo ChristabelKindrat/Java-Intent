@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) throws NoSuchFieldException {
         //Block 1  Annotation
         ImmutablePerson person = new ImmutablePerson("Leyla", 23);
-        person.getName(); //This name can't be changed! Name: Leyla
-        person.getAge(); //This age can't be changed! Age: 23
+        person.getName();
+        person.getAge();
 
         //Block 2 Annotation & Exception
         User firstUser = new User("Karina","Karina123","karina123@gmail.com"); //Your user successfully created!
