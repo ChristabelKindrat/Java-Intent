@@ -39,14 +39,14 @@ public class Main {
 
         synchronized (thirdThead) {
             thirdThead.wait();
-        }
-        thirdThead.numbersBetween(startNumber, finishedNumber, primes);
-        
-         synchronized (thirdThead) {
-            thirdThead.notify();
+            thirdThead.numbersBetween(startNumber, finishedNumber, primes);
         }
 
-        System.out.println(primes);
+        synchronized (thirdThead) {
+            thirdThead.notify();
+            System.out.println(primes);
+        }
+
         System.out.println("Prime numbers between " + startNumber + " and " + finishedNumber);
     }
 }
